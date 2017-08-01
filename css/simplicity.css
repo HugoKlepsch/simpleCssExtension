@@ -1,0 +1,81 @@
+html
+{
+    font-family: DejaVu Serif, serif;
+    font-size: 12pt;
+}
+
+.button {
+    margin 3% auto;
+    padding: 4px;
+    text-align: center;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #d3d3d3;
+}
+
+body
+{
+    background-color: whitesmoke;
+    border-left: lightgrey 1pt solid;
+    border-right: lightgrey 1pt solid;
+    max-width: 550pt;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+p, li
+{
+    line-height: 140%;
+}
+
+em
+{
+    font-style: normal;
+    font-weight: bold;
+}
+
+h1
+{
+    border-bottom: grey 1pt solid;
+}
+
+h2
+{
+    border-bottom: grey 1pt dashed;
+}
+
+h3
+{
+    border-bottom: grey 1pt dotted;
+}
+
+img
+{
+    max-width: 40%;
+}
+
+pre
+{
+    font-size: 10pt;
+    line-height: normal;
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+    border: grey 1pt solid;
+    background-color: #EBEBEB;
+    overflow: auto;
+}
+
+#toc li
+{
+    list-style-position: inside;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
