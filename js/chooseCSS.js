@@ -1,12 +1,11 @@
 document.addEventListener("click", (e) => {
     if (e.target.classList.contains("simplecss")) {
 
-        console.log("on click side");
-
         var isOn = e.target.textContent;
 
+        /*
         browser.tabs.executeScript(null, {
-            file: "js/contentScriptSimpleCss.js"
+            file: "../js/contentScriptSimpleCss.js"
         });
 
         var gettingActiveTab = browser.tabs.query({
@@ -19,6 +18,27 @@ document.addEventListener("click", (e) => {
                 isOn: isOn
             });
         });
+        */
+        if (isOn == "On") {
+            var inserting = browser.tabs.insertCSS(null,
+                {
+                    allFrames: true,
+                    cssOrigin: "user",
+                    file: "/css/simplicity.css"
+                });
+            inserting.then( function(value) {
+            }, function(reason) {
+            });
+        } else if (isOn == "Off") {
+            var removing = browser.tabs.removeCSS(null,
+                {
+                    allFrames: true,
+                    file: "/css/simplicity.css"
+                });
+            removing.then(function(value) {
+            }, function(reason) {
+            });
+        }
     }
 });
 
